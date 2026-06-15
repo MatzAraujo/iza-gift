@@ -147,6 +147,7 @@ h1, h2, h3 {
     opacity: 0;
     overflow: hidden;
     text-align: left;
+    transition: opacity 0.3s ease, height 0.3s ease; /* Adicionado para suavizar no mobile */
 }
 
 .stitch-icon {
