@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Alguém Especial</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="main.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <div class="envelope-overlay" id="envelopeOverlay"></div>
+
+    <img src="./imgs/stitch.png" class="floating-stitch st-1" alt="stitch">
+    <img src="./imgs/stitch.png" class="floating-stitch st-2" alt="stitch">
+    <img src="./imgs/stitch.png" class="floating-stitch st-3" alt="stitch">
+    <img src="./imgs/stitch.png" class="floating-stitch st-4" alt="stitch">
+
+    <section class="hero">
+        <h1>Um espaço reservado para quem faz os dias melhores...</h1>
+        <div class="scroll-down">Role para baixo ✨</div>
+    </section>
+
+   <!-- 2. CARTINHA DO STITCH (VERSÃO DIRETA E SEM BUGS) -->
+    <section class="section-container">
+        <div class="letter-box trigger-letter" id="letterBox">
+            
+            <!-- Botão de Ação Principal -->
+            <button class="toggle-card-btn" id="cardBtn">Abrir Mensagem de Matheus 📩</button>
+            
+            <!-- Conteúdo Oculto que vai expandir -->
+            <div class="hidden-letter-content" id="letterContent">
+                <div class="stitch-icon">🛸💙</div>
+                <h2>Um detalhe especial...</h2>
+                <p class="letter-text">
+                    Prestei atenção quando você disse que amava o Stitch, então ele deu uma passada aqui hoje para te dar um oi. <br><br>
+                    Obrigado por ser essa pessoa tão top, inteligente e parceira. Um mimo para adoçar a sua semana e te lembrar do quanto você é especial para mim.
+                </p>
+                <div class="signature">Com carinho, Matheus.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="grid-section">
+        <h2 class="grid-title">O que combina com você...</h2>
+        <div class="cards-grid">
+            <div class="grid-item trigger-grid">
+                <span class="item-icon">💙</span>
+                <h3>O Stitch</h3>
+                <p>Porque eu guardo os detalhes das coisas que você ama.</p>
+            </div>
+            <div class="grid-item trigger-grid">
+                <span class="item-icon">🍫</span>
+                <h3>Os Doces</h3>
+                <p>Para deixar a sua rotina de trabalho um pouco mais leve e doce.</p>
+            </div>
+            <div class="grid-item trigger-grid">
+                <span class="item-icon">🦫</span>
+                <h3>A Capivara</h3>
+                <p>O detalhe que faltava para deixar o dia mais divertido.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="motivo-section">
+        <h2 class="motivo-main-title">Por que um site?</h2>
+        <div class="motivo-container">
+            
+            <div class="motivo-card trigger-motivo">
+                <div class="motivo-icon-side">📝❌</div>
+                <div class="motivo-info">
+                    <h3>Cartas tradicionais não têm suporte a emoção</h3>
+                    <p>Vamos ser sinceros: papel comum não aceita animações, e a minha letra escrita quebraria toda a experiência (é feia demais) kkkkk.</p>
+                </div>
+            </div>
+
+            <div class="motivo-card trigger-motivo">
+                <div class="motivo-icon-side">💡✨</div>
+                <div class="motivo-info">
+                    <h3>Você merece algo fora do padrão</h3>
+                    <p>Como você é uma mulher absurdamente inteligente, fora da curva e super dedicada ao que faz, um cartão de papel de banca não estaria à sua altura.</p>
+                </div>
+            </div>
+
+            <div class="motivo-card trigger-motivo">
+                <div class="motivo-icon-side">⏳☕</div>
+                <div class="motivo-info">
+                    <h3>Para quebrar a rotina do trampo</h3>
+                    <p>Sei que a correira e as paradas do dia a dia cobram muito da gente, mas a sua presença deixa qualquer expediente mais leve. Considere isso aqui uma pausa programada para te arrancar um sorriso.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footer-action">
+        <button class="action-btn" onclick="createHearts(event)">Clique para me dar um sorriso</button>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

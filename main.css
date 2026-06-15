@@ -1,0 +1,383 @@
+/* ==========================================================================
+   PALETA DE CORES DEFINITIVA (STITCH INDIGO THEME)
+   ========================================================================== */
+:root {
+    --stitch-dark-purple: #1D1B4B; 
+    --stitch-purple-mid: #312E81;  
+    --stitch-blue-neon: #38BDF8;   
+    --white-card: rgba(255, 255, 255, 0.98);
+    
+    /* Cores do Envelope Interativo */
+    --envelope-bg: #2563EB;
+    --envelope-light: #3B82F6;
+    --envelope-dark: #1D4ED8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    color: #1E293B;
+    background: linear-gradient(180deg, var(--stitch-dark-purple) 0%, var(--stitch-purple-mid) 50%, var(--stitch-dark-purple) 100%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-family: 'Comfortaa', cursive;
+    color: var(--stitch-dark-purple);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   ELEMENTOS FLUTUANTES DO STITCH
+   ========================================================================== */
+.floating-stitch {
+    position: absolute;
+    width: 65px; 
+    height: 65px;
+    opacity: 0.35; 
+    z-index: 1;
+    cursor: pointer;
+}
+
+.st-1 { top: 12%; left: 6%; animation: floatY 5s ease-in-out infinite alternate; }
+.st-2 { top: 35%; right: 8%; animation: floatY 7s ease-in-out infinite alternate-reverse; }
+.st-3 { top: 62%; left: 9%; animation: floatY 6s ease-in-out infinite alternate; }
+.st-4 { top: 85%; right: 6%; animation: floatY 8s ease-in-out infinite alternate-reverse; }
+
+@keyframes floatY {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-35px); }
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    color: #FFFFFF;
+    font-size: 2.3rem;
+    line-height: 1.4;
+    max-width: 700px;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.scroll-down {
+    color: var(--stitch-blue-neon);
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 40px;
+    animation: bounce 2s infinite;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   SEÇÃO: ENVELOPE INTERATIVO 3D
+   ========================================================================== */
+/* ==========================================================================
+   SEÇÃO: CARD REVELAÇÃO DIRETO
+   ========================================================================== */
+.section-container {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.letter-box {
+    width: 100%;
+    max-width: 450px;
+    background: var(--white-card);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid var(--stitch-blue-neon);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.letter-box:hover {
+    box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
+}
+
+.toggle-card-btn {
+    background: linear-gradient(135deg, var(--stitch-blue-neon), var(--stitch-purple-mid));
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.toggle-card-btn:active {
+    transform: scale(0.98);
+}
+
+/* Container do conteúdo (Começa zerado e escondido) */
+.hidden-letter-content {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+.stitch-icon {
+    font-size: 2rem;
+    margin: 20px 0 10px 0;
+    text-align: center;
+}
+
+.letter-box h2 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    color: var(--stitch-purple-mid);
+    text-align: center;
+}
+
+.letter-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+.signature {
+    text-align: right;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    color: var(--stitch-purple-mid);
+    font-size: 1.1rem;
+}
+
+
+
+
+/* Garante o alinhamento centralizado no mobile também */
+
+
+.close-letter-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #94A3B8;
+    font-weight: bold;
+    line-height: 1;
+}
+
+
+
+.stitch-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+.letter-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+.signature {
+    text-align: right;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    color: var(--stitch-purple-mid);
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   GRID DE DETALHES
+   ========================================================================== */
+.grid-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.grid-title {
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.grid-item {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0; 
+    transform: translateY(30px);
+}
+
+.item-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.grid-item h3 {
+    color: var(--stitch-blue-neon);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   SEÇÃO POR QUE UM SITE?
+   ========================================================================== */
+.motivo-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.motivo-main-title {
+    color: #FFFFFF; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.motivo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.motivo-card {
+    background: var(--white-card);
+    padding: 25px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    border-right: 4px solid var(--stitch-blue-neon);
+    cursor: pointer;
+    opacity: 0; 
+    transform: translateY(30px);
+}
+
+.motivo-icon-side {
+    font-size: 2rem;
+    min-width: 45px;
+    text-align: center;
+}
+
+.motivo-info h3 {
+    font-size: 1.15rem;
+    color: var(--stitch-dark-purple);
+    margin-bottom: 4px;
+}
+
+.motivo-info p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   FOOTER INTERATIVO
+   ========================================================================== */
+.footer-action {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.action-btn {
+    background: linear-gradient(135deg, var(--stitch-blue-neon), var(--stitch-purple-mid));
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.3);
+    transition: transform 0.2s;
+}
+
+.heart-particle {
+    position: absolute;
+    color: var(--stitch-blue-neon);
+    font-size: 1.5rem;
+    pointer-events: none;
+    animation: floatUp 2s linear forwards;
+    z-index: 999;
+}
+
+/* Keyframes de Animações Globais */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-150px) scale(1.4); opacity: 0; }
+}
+
+@keyframes pulseHint {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 1.8rem; }
+    .motivo-card { flex-direction: column; text-align: center; }
+}
